@@ -26,34 +26,33 @@ string binary(int input ){
     string result, temp;
     int temp2;
 
-    while (input != 0)
-    {
+    do {
         temp2 = input %2;
         temp = to_string(temp2);
         input = input / 2;
         result = temp + result;
-    }
+    } while (input != 0);
+
     return result;
 }
 string octal(int input ){ 
     string result, temp;
     int temp2;
 
-    while (input != 0)
-    {
+    do {
         temp2 = input %8;
         temp = to_string(temp2);
         input = input / 8;
         result = temp + result;
-    }
+    } while (input != 0);
+
     return result;
 }
 string hexa(int input ){ 
     string result, temp;
     int temp2;
 
-    while (input != 0)
-    {
+    do {
         temp2 = input %16;
 
         if (temp2 == 10)
@@ -73,6 +72,7 @@ string hexa(int input ){
 
         input = input / 16;
         result = temp + result;
-    }
+    } while (input != 0);
+    
     return result;
 }
