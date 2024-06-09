@@ -24,11 +24,11 @@ int main(){
 }
 string binary(int input ){ 
     string result, temp;
-    int temp2;
+    int remainder;
 
     do {
-        temp2 = input %2;
-        temp = to_string(temp2);
+        remainder = input %2;
+        temp = to_string(remainder);
         input = input / 2;
         result = temp + result;
     } while (input != 0);
@@ -37,11 +37,11 @@ string binary(int input ){
 }
 string octal(int input ){ 
     string result, temp;
-    int temp2;
+    int remainder;
 
     do {
-        temp2 = input %8;
-        temp = to_string(temp2);
+        remainder = input %8;
+        temp = to_string(remainder);
         input = input / 8;
         result = temp + result;
     } while (input != 0);
@@ -50,25 +50,25 @@ string octal(int input ){
 }
 string hexa(int input ){ 
     string result, temp;
-    int temp2;
+    int remainder;
 
     do {
-        temp2 = input %16;
+        remainder = input %16;
 
-        if (temp2 == 10)
+        if (remainder == 10)
             temp = "A";
-        else if (temp2 == 11)
+        else if (remainder == 11)
             temp = "B";
-        else if (temp2 == 12)
+        else if (remainder == 12)
             temp = "C";
-        else if (temp2 == 13)
+        else if (remainder == 13)
             temp = "D";
-        else if (temp2 == 14)
+        else if (remainder == 14)
             temp = "E";
-        else if (temp2 == 15)
+        else if (remainder == 15)
             temp = "F";
         else
-            temp = to_string(temp2);
+            temp = to_string(remainder);
 
         input = input / 16;
         result = temp + result;
